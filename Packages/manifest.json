@@ -5,6 +5,7 @@
     "com.unity.analytics": "exclude",
     "com.unity.standardevents": "exclude",
     "com.unity.purchasing": "exclude",
-    "com.unity.shadergraph": "1.1.4-preview"
+    "com.unity.shadergraph": "1.1.4-preview",
+    "com.unity.probuilder": "3.0.6"
   }
 }
