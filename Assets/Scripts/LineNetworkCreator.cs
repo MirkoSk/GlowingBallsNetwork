@@ -14,7 +14,6 @@ namespace GlowinBallsNetwork
         [Space]
         [SerializeField] float maxConnectionDistance = 5f;
         [SerializeField] int maxConnectionsPerBall = 6;
-        [SerializeField] float waitTime = 1f;
         [SerializeField] float lineDrawTime = 1f;
         [Range(1f, 5f)]
         [SerializeField] float ballHighlightAmount = 2f;
@@ -31,6 +30,7 @@ namespace GlowinBallsNetwork
         // Private
         List<Transform> freeBalls = new List<Transform>();
         List<Transform> allBalls = new List<Transform>();
+        float waitTime;
         #endregion
 
 
@@ -44,6 +44,11 @@ namespace GlowinBallsNetwork
         #region Unity Event Functions
         private void Start()
         {
+            waitTime = lineDrawTime * 0.875f;
+
+            // Increase the maximum tween limit (just precautions)
+            LeanTween.init(5000);
+
             // Add all balls in the scene to the freeBalls
             GameObject[] ballsGO = GameObject.FindGameObjectsWithTag("Ball");
             for (int i = 0; i < ballsGO.Length; i++)
