@@ -5135,7 +5135,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
-  antialiasingMode: 0
+  antialiasingMode: 2
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25
@@ -10822,8 +10822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f34c92e8e4edfcf469386682bd092566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxConnectionDistance: 100
-  maxConnectionsPerBall: 3
+  maxConnectionDistance: 10
+  maxNewConnectionsPerBall: 6
   lineDrawTime: 0.5
   ballHighlightAmount: 3.5
   randomStartBall: 1
