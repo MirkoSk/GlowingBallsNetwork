@@ -13,7 +13,7 @@ namespace GlowinBallsNetwork
         // Private Serializable
         [Space]
         [SerializeField] float maxConnectionDistance = 5f;
-        [SerializeField] int maxConnectionsPerBall = 6;
+        [SerializeField] int maxNewConnectionsPerBall = 6;
         [SerializeField] float lineDrawTime = 1f;
         [Range(1f, 5f)]
         [SerializeField] float ballHighlightAmount = 2f;
@@ -107,8 +107,8 @@ namespace GlowinBallsNetwork
             }
 
             // Randomly select balls from the calculated list to connect to
-            List<Transform> connectedBalls = new List<Transform>(maxConnectionsPerBall);
-            float ballsNeeded = maxConnectionsPerBall;
+            List<Transform> connectedBalls = new List<Transform>(maxNewConnectionsPerBall);
+            float ballsNeeded = maxNewConnectionsPerBall;
             float ballsLeft = connectableBalls.Count;
             for (int i = 0; i < connectableBalls.Count; i++)
             {
